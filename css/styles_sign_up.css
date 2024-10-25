@@ -1,0 +1,43 @@
+:root{
+    --surveyBorderColor: #1f3870;
+    --button-background-color: #2b478a;
+    --button-hover-background-color: #182b54;
+}
+main{
+    animation: fadein 1s forwards;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.form_log1{
+    margin: 25px 0;
+    @media screen and (max-width: 767px){
+        margin-top: 68px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        margin-top: 61px;
+    }
+    @media screen and (min-width: 1024px){
+        margin-top: 64px;
+    }
+}
+.button_submit_reset {
+    background-color: var(--button-background-color);
+    border: none;
+    align-items: center;
+    padding: 15px 25px;
+    font-family: "Nunito", sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.button_submit_reset:hover{
+    background-color: var(--button-hover-background-color);
+}
+.button_set{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}

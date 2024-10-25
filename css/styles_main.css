@@ -1,0 +1,157 @@
+:root{
+    --border-color: #1f3870;
+    --button-hover-background-color: #182b54;
+    --button-background-color: #1f3870;
+}
+@keyframes pulse {
+    50% {
+        box-shadow: 0 0 0 0.2em rgba(129, 130, 133, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 0.35em rgba(129, 130, 133, 0);
+    }
+}
+.main_text{
+    animation: fadein 1s forwards;
+    @media screen and (max-width: 767px){
+        margin-top: 63px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        margin-top: 58px;
+    }
+    @media screen and (min-width: 1024px){
+        margin-top: 61px;
+    }
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.85)), url(../images/math_main.jpg);
+    height: 500px;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    display: grid;
+    grid-template-rows: repeat(3, 33.3%);
+    h1{
+        margin: 0;
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        text-align: center;
+        @media screen and (max-width: 767px) {
+            font-size: 38px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 42px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 46px;
+        }
+    }
+    p{
+        margin: 0;
+        padding: 30px;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 22px;
+        }
+    }
+    .button{
+        margin: 0;
+        display: grid;
+        justify-content: center;
+        justify-self: center;
+        font-family: "Golos Text", sans-serif;
+        width: fit-content;
+        padding: 15px;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 20px;
+        }
+        background-color: var(--button-background-color);
+        text-decoration: none;
+        color: white;
+        border-radius: 15px;
+    }
+    .button:hover{
+        background-color: var(--button-hover-background-color);
+    }
+}
+.main_text:hover{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.95)), url(../images/math_main.jpg);
+}
+.courses{
+    opacity: 0;
+    animation: fadein 1s forwards;
+    animation-delay: 0.5s;
+    z-index: 1;
+    @media screen and (max-width: 767px) {
+        padding: 10px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 15px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 20px;
+    };
+    max-width: 100%;
+    h1{
+        text-align: center;
+        @media screen and (max-width: 767px) {
+            font-size: 27px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 42px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 46px;
+        };
+    }
+    .course_info{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        column-gap: 1%;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 22px;
+        };
+        .grid_lines {
+            width: 100%;
+            align-content: center;
+            height: auto;
+            border: 3px solid var(--border-color);
+            border-radius: 10px;
+        }
+        .animate_right_one{
+            animation: pulse 1s infinite;
+        }
+    }
+    .h2_being_h3{
+        margin-bottom: 0;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 22px;
+        };
+    }
+}

@@ -1,0 +1,85 @@
+:root{
+    --link-hover-color: #2b478a;
+}
+main{
+    h2{
+        opacity: 0;
+        animation: fadein 1s forwards;
+        animation-delay: 0.5s;
+    }
+    .topic{
+        @media screen and (max-width: 767px){
+            margin-top: 63px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            margin-top: 58px;
+        }
+        @media screen and (min-width: 1024px){
+            margin-top: 61px;
+        }
+        animation: fadein 1s forwards;
+    }
+    display: grid;
+    padding: 0 30px;
+    @media screen and (max-width: 767px){
+        padding: 0 15px;
+    }
+    hr{
+        border: 1px solid lightgray;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        margin: 0 auto;
+        animation: fadein 1s forwards;
+    }
+    .theorem_image {
+        animation: fadein 1s forwards;
+        height: auto;
+        text-align: center;
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            img {
+                width: 75%;
+            }
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1920px) {
+            img {
+                width: 40%;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            img {
+                width: 100%;
+            }
+        };
+    }
+    .image_inside_theorem{
+        animation: fadein 1s forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
+    h3{
+        opacity: 0;
+        animation: fadein 1s forwards;
+        animation-delay: 0.5s;
+    }
+    .main_theorem_text{
+        opacity: 0;
+        animation: fadein 1s forwards;
+        animation-delay: 0.5s;
+        font-size: 19px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .return {
+        opacity: 0;
+        animation: fadein 1s forwards;
+        animation-delay: 0.5s;
+        text-decoration: none;
+        color: var(--link-hover-color);
+        font-size: 18px;
+    }
+
+    .return:hover {
+        text-decoration: underline;
+    }
+}

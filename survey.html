@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8">
+        <title>MathAddicts - Опитувальник</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="SHORTCUT ICON" href="images/calc_icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles_general.css" type="text/css"/>
+        <link rel="stylesheet" href="css/styles_survey.css" type="text/css"/>
+        <!--FontAwesome - для іконок-->
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+        <div class="headed">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox"/>
+                <label class="menu__btn" for="menu__toggle">
+                    <span style="display: flex; align-self: center"></span>
+                </label>
+                <div class="menu__box">
+                    <div class="search_bar">
+                        <label for="searchInput"><i class="fa fa-search"></i></label>
+                        <input id="searchInput" type="search" placeholder="Search"/>
+                    </div>
+                    <a class="menu__item" href="news.html"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Новини/Статті</a>
+                    <a class="menu__item" href="survey.html"><i class="fa fa-bar-chart-o"></i>&nbsp;&nbsp;Опитувальник</a>
+                    <a class="menu__item" href="look_for_theorems.html"><i class="fa fa-calculator"></i>&nbsp;&nbsp;Пошук теорем</a>
+                    <a class="menu__item quiz" href="quiz.html"><img src="images/icons8-quiz-50.png" alt="Завантажте фото!" style="width: 20px;">&nbsp;&nbsp;Задачі для користувачів</a>
+                    <div class="submenu__box">
+                        <input id="submenu__toggle" type="checkbox"/>
+                        <label class="submenu__btn" for="submenu__toggle">
+                            <span style="justify-content: center"><i class="fa fa-users"></i>&nbsp;&nbsp;Про нас&ensp;<i class="fa fa-caret-down"></i></span>
+                        </label>
+                        <ul class="submenu-content">
+                            <li class="submenu__item"><a href="about_us.html">Наша історія</a></li>
+                            <li class="submenu__item"><a href="about_partners.html">Наші партнери</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="logo__div">
+                        <img src="images/output-onlinegiftools.gif" class="icongif" alt="Завантажте іконку!">&nbsp;
+                        <a href="index.html" class="logo">MathAddicts</a>
+                    </span>
+            <div class="sign_in_button_border">
+                <input id="sign__in" type="checkbox"/>
+                <label class="button_signin" for="sign__in">
+                    <span style="display: flex; align-self: center">Ввійти до акаунту</span>
+                </label>
+                <label for="sign__in" class="background_shadow"></label>
+                <div class="modal_window">
+                    <form class="form_log">
+                                <span style="align-items: center; text-align: center; width: 100%; max-width: 100%;">
+                                    <span style="font-size: 32px; font-weight: bold;">Ввійти до акаунту</span><br/><br/>
+                                    <label for="login">Ім'я користувача</label><br/>
+                                    <input id="login" type="text" name="login" required placeholder="Math_Addict"/><br/><br/>
+                                    <label for="password">Пароль (мінімум 8 символів)</label><br/>
+                                    <input id="password" type="password" name="login" required/>
+                                    <span class="button_set">
+                                        <button type="submit" class="button_submit_reset">Увійти</button>&nbsp;&nbsp;
+                                        <button type="reset" class="button_submit_reset">Скинути</button>
+                                    </span>
+                                </span>
+                        <p>Ще не маєте акаунту? Зареєструйтесь <a href="signup.html">тут.</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form>
+            <div class = "forms">
+                <div class="form_div1">
+                    <div class="block1">
+                        <label for = "email">Адреса електронної пошти</label><br/>
+                        <input type = "email" id = "email" required placeholder = "Math_Addict@gmail.com"><br/><br/>
+                        <label for = "login1">Ім'я користувача</label><br/>
+                        <input id = "login1" type = "text" required placeholder = "Math_Addict"><br/><br/>
+                        <label for = "select_list">Виберіть Вашу освітню роль:</label><br/>
+                        <select id = "select_list">
+                            <option value = "pupil" selected>Учень</option>
+                            <option value = "student">Студент</option>
+                            <option value = "teacher">Вчитель</option>
+                            <option value = "other">Інше</option>
+                        </select><br/><br/>
+                    </div>
+                    <div class="block2">
+                        <label for = "radio_question">Як часто Ви відвідуєте наш сайт?</label>
+                        <br/><br/>
+                        <span id="radio_question">
+                            <label for="option1"><input type="radio" id="option1" name="time"/>1 раз на 3 дні</label>
+                            <label for="option2"><input type="radio" id="option2" name="time"/>1 раз на тиждень</label>
+                            <label for="option3"><input type="radio" id="option3" name="time"/>1 раз на місяць</label>
+                            <label for="option4"><input type="radio" id="option4" name="time"/>рідше</label>
+                        </span><br/>
+                        <label for = "radio_question1">Чи все Вам сподобалось на нашому порталі?</label>
+                        <br/><br/>
+                        <span id="radio_question1">
+                            <label for="option5"><input type="radio" id="option5" name="y/n"/>Так</label>
+                            <label for="option6"><input type="radio" id="option6" name="y/n"/>Ні</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="form_div2">
+                    <fieldset class="review1">
+                        <label for = "review">Залишіть Ваш відгук про наш сервіс:</label><br/>
+                        <textarea id = "review" rows = "4" cols = "50" placeholder = "Ваш відгук..."></textarea><br/><br/>
+                        <label for = "fixing_site_problems">Допоможіть нам стати краще! Що, на Вашу думку, має бути покращене в нашому сервісі (розгорнуту відповідь можна надати в наступному текстовому полі)</label><br/>
+                        <fieldset style = "border: 0;" id="fixing_site_problems">
+                            <label><input type="checkbox" name="checkbox" value="interface" class="checkbox"/>Інтерфейс</label>
+                            <label><input type="checkbox" name="checkbox" value="quality_of_work" class="checkbox"/>Якість роботи працівників</label>
+                            <label><input type="checkbox" name="checkbox" value="quality_of_teaching" class="checkbox"/>Якість викладання матеріалу</label>
+                            <label><input type="checkbox" name="checkbox" value="speed_of_response" class="checkbox"/>Швидкість зворотного зв'язку</label>
+                            <label><input type="checkbox" name="checkbox" value="number_of_theorems" class="checkbox"/>Кількість теорем на сайті</label>
+                            <label><input type="checkbox" name="checkbox" value="increase_the_number_of_subjects" class="checkbox"/>Кількість предметів, що охоплює сайт (або введення тем для студентів університету)</label>
+                            <label><input type="checkbox" name="checkbox" value="speed_of_site" class="checkbox"/>Швидкість роботи сайту</label>
+                            <label><input type="checkbox" name="checkbox" value="safety_and_different_modes" class="checkbox"/>Безпека, різні режими для людей з обмеженими можливостями та темна тема</label>
+                        </fieldset>
+                        <label for = "more">Розгорнута відповідь для покращення сервісу:</label><br/>
+                        <textarea id = "more" rows = "4" cols = "50" placeholder = "Додаткова інформація..."></textarea>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="button_set">
+                <button type="submit" class="button_submit_reset">Відправити</button>
+                <button type="reset" class="button_submit_reset">Скинути</button>
+            </div>
+        </form>
+        <h2>Секція відгуків (відгук можна залишити в опитувальнику вище):</h2><br/><br/>
+        <div class="all_feedback">
+            <div class="feedback">
+                <p class="feedback_text">Класний сайт! Тут купа теорем із поясненнями та прикладами, а ще новини зі світу математики — можна зависнути надовго!</p>
+                <p class="feedback_name">Ім'я користувача: @uspex13</p>
+            </div>
+            <div class="feedback">
+                <p class="feedback_text">Дуже зручно: все, від теорем до нових статей про математику, в одному місці. Корисно та цікаво!</p>
+                <p class="feedback_name">Ім'я користувача: @Kurmanjan1990</p>
+            </div>
+            <div class="feedback">
+                <p class="feedback_text">Сайт реально допоміг розібратися в математиці, доведення чіткі, плюс є багато новин і цікавих статей.</p>
+                <p class="feedback_name">Ім'я користувача: @Abdurekhmenova1953</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_main">
+            <div class="navigate_footer">
+                <a href="news.html">Новини/Статті</a>
+                <a href="survey.html">Опитувальник</a>
+                <a href="look_for_theorems.html">Пошук теорем</a>
+                <a href="about_us.html">Про нас</a>
+            </div>
+            <div class="info_footer">
+                <div><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;dubchak.oleksandr@chnu.edu.ua</div>
+                <div><i class="fa fa-phone" aria-hidden="true"></i> +38 (050) 123 45 67</div>
+                <div><i class="fa fa-building-o"></i> &nbsp;MathAddicts Inc.</div>
+                <div>вул. Університетська, 28</div>
+                <div> м. Чернівці, Чернівецька область, 58000</div>
+                <div>Україна</div>
+            </div>
+        </div>
+        <div class="copyright_and_more">
+            <button class="button2">
+                <span class="copyright">Place your cursor here &rarr;&nbsp;&nbsp; Copyright &#169; 2024 MathAddicts. All rights reserved. &nbsp;&nbsp;&larr; Place your cursor here</span>
+                <img src="images/run-forest-run.gif" alt="Forest didn't run away :(" class="copyright1 image">
+                <img src="images/1.gif" alt="The Dark Side of Force has won :(" class="copyright1 image">
+                <br/>
+                <video id="myaudio" controls class="copyright1">
+                    <source src="images/MEOW.mp4" type="video/mp4"/>
+                </video>
+                <span class="copyright1" style="color: white; font-size: 20px;"><br/>&uarr; Play this :P &uarr;</span>
+            </button>
+        </div>
+    </footer>
+    <button onclick="scrollFunction()" class="hover_button" title="Go to top">&uarr;</button>
+    <script>
+        var audio = document.getElementById("myaudio");
+        audio.volume = 0.5;
+    </script>
+    <script>
+        let upButton = document.getElementsByClassName("hover_button")[0];
+        window.onscroll = function () { scrollDisplay() };
+        function scrollDisplay() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                upButton.style.display = "block";
+            }
+            else {
+                upButton.style.display = "none";
+            }
+        }
+
+        function scrollFunction(){
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    </body>
+</html>

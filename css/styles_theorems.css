@@ -1,0 +1,116 @@
+:root{
+    --link-hover-color: #2b478a;
+    --bottomline-color: lightgray;
+}
+main {
+    animation: fadein 1s;
+    .entry_heading{
+        margin: 0;
+        @media screen and (max-width: 767px){
+            margin-top: 64px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            margin-top: 58px;
+        }
+        @media screen and (min-width: 1024px){
+            margin-top: 61px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            padding-left: 12px;
+            padding-top: 5px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 28px;
+            padding-left: 15px;
+            padding-top: 10px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 36px;
+            padding-left: 40px;
+            padding-top: 17px;
+        };
+    }
+    .all {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        .theorems {
+            .theorem_image {
+                @media screen and (max-width: 767px) {
+                    width: 150px;
+                    height: auto;
+                    padding: 12px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                    width: 250px;
+                    height: auto;
+                    padding: 15px;
+                }
+                @media screen and (min-width: 1024px) {
+                    width: 90%;
+                    height: auto;
+                    padding: 0 25px 0;
+                };
+            }
+            .theorem_image1 {
+                @media screen and (max-width: 767px) {
+                    width: 150px;
+                    height: auto;
+                    padding: 12px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                    width: 250px;
+                    height: auto;
+                    padding: 15px;
+                }
+                @media screen and (min-width: 1024px) {
+                    width: 90%;
+                    height: auto;
+                    padding: 30px 25px 20px;
+                };
+            }
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            width: 100%;
+
+            .table_text {
+                align-content: center;
+                @media screen and (max-width: 767px) {
+                    padding-left: 0;
+                }
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                    padding-left: 25px;
+                }
+                @media screen and (min-width: 1024px) {
+                    padding-left: 35px;
+                };
+
+                h2 {
+                    @media screen and (max-width: 767px) {
+                        font-size: 18px;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 1023px) {
+                        font-size: 28px;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        font-size: 36px;
+                    };
+                    .link {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    .link:hover {
+                        color: var(--link-hover-color);
+                    }
+                }
+            }
+        }
+
+        .theorem1 {
+            border-bottom: 3px solid var(--bottomline-color);
+            max-width: 100%;
+        }
+    }
+}

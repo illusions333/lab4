@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8">
+        <title>MathAddicts - Теорема</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="SHORTCUT ICON" href="images/calc_icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles_general.css" type="text/css"/>
+        <link rel="stylesheet" href="css/styles_theorems1.css" type="text/css"/>
+        <!--FontAwesome - для іконок-->
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="headed">
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox"/>
+                    <label class="menu__btn" for="menu__toggle">
+                        <span style="display: flex; align-self: center"></span>
+                    </label>
+                    <div class="menu__box">
+                        <div class="search_bar">
+                            <label for="searchInput"><i class="fa fa-search"></i></label>
+                            <input id="searchInput" type="search" placeholder="Search"/>
+                        </div>
+                        <a class="menu__item" href="news.html"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Новини/Статті</a>
+                        <a class="menu__item" href="survey.html"><i class="fa fa-bar-chart-o"></i>&nbsp;&nbsp;Опитувальник</a>
+                        <a class="menu__item" href="look_for_theorems.html"><i class="fa fa-calculator"></i>&nbsp;&nbsp;Пошук теорем</a>
+                        <a class="menu__item quiz" href="quiz.html"><img src="images/icons8-quiz-50.png" alt="Завантажте фото!" style="width: 20px;">&nbsp;&nbsp;Задачі для користувачів</a>
+                        <div class="submenu__box">
+                            <input id="submenu__toggle" type="checkbox"/>
+                            <label class="submenu__btn" for="submenu__toggle">
+                                <span style="justify-content: center"><i class="fa fa-users"></i>&nbsp;&nbsp;Про нас&ensp;<i class="fa fa-caret-down"></i></span>
+                            </label>
+                            <ul class="submenu-content">
+                                <li class="submenu__item"><a href="about_us.html">Наша історія</a></li>
+                                <li class="submenu__item"><a href="about_partners.html">Наші партнери</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="logo__div">
+                            <img src="images/output-onlinegiftools.gif" class="icongif" alt="Завантажте іконку!">&nbsp;
+                            <a href="index.html" class="logo">MathAddicts</a>
+                        </span>
+                <div class="sign_in_button_border">
+                    <input id="sign__in" type="checkbox"/>
+                    <label class="button_signin" for="sign__in">
+                        <span style="display: flex; align-self: center">Ввійти до акаунту</span>
+                    </label>
+                    <label for="sign__in" class="background_shadow"></label>
+                    <div class="modal_window">
+                        <form class="form_log">
+                                    <span style="align-items: center; text-align: center; width: 100%; max-width: 100%;">
+                                        <span style="font-size: 32px; font-weight: bold;">Ввійти до акаунту</span><br/><br/>
+                                        <label for="login">Ім'я користувача</label><br/>
+                                        <input id="login" type="text" name="login" required placeholder="Math_Addict"/><br/><br/>
+                                        <label for="password">Пароль (мінімум 8 символів)</label><br/>
+                                        <input id="password" type="password" name="login" required/>
+                                        <span class="button_set">
+                                            <button type="submit" class="button_submit_reset">Увійти</button>&nbsp;&nbsp;
+                                            <button type="reset" class="button_submit_reset">Скинути</button>
+                                        </span>
+                                    </span>
+                            <p>Ще не маєте акаунту? Зареєструйтесь <a href="signup.html">тут.</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="topic">
+                <h1 style="font-size: 44px; text-align: center">Принцип Діріхле: пояснення, доведення, використання</h1>
+                <hr>
+                <br/><br/>
+                <div class="theorem_image"><img src="images/dirihle1.jpg" alt="Завантажте фото!"></div>
+            </div>
+            <h2 style="width: 100%;">Формулювання принципу Діріхле, яке зазвичай формується на прикладі з клітками та кролями:
+                Припустимо, m кроликів розсаджені в n клітках. Тоді хоча б в одній клітці міститься не менше ⌈m / n⌉ кролів
+                (⌈х⌉ це найменше ціле число, що перевищує х, наприклад, ⌈7.1⌉ = 8). Щоб простіше зрозуміти принцип, наведемо
+                приклад: нам потрібно розставити 10 кролів у 9 кліток. Тоді принцип стверджує, що хоча б в 1 клітці буде
+                ⌈10 / 9⌉ = ⌈1.1111⌉ = 2 кролі.</h2>
+            <p class="main_theorem_text">
+                Доведення принципу Діріхле є доволі інтуїтивним. Доведення побудуємо методом від супротивного. Припустимо, що ми все-таки
+                можемо розмістити всіх m кролів у n кліток так (m > n), щоб у кожній клітці виявилось менше кролів, ніж ⌈m / n⌉.<br/>
+                1) Давайте поставимо в кожну клітку по ⌊m / n⌋ кролів, якщо m / n не є цілим числом. Зауважимо, що
+                ⌈m / n⌉ - 1 = ⌊m / n⌋ для всіх дробових чисел. Ми отримаємо, що у клітках будуть розсаджені ⌊m / n⌋ * n кролів, що менше
+                ніж m / n * n = m. Нам потрібно розмістити ще m - (⌊m / n⌋ * n) кролів, але в яку би клітку ми їх не поставили,
+                тоді в ній виявиться вже ⌊m / n⌋ + 1 = ⌈m / n⌉ кролів, що суперечить припущенню. Отже, для будь-якого дробового числа
+                m / n принцип Діріхле доведений.
+                <br/><br/>
+                2) Якщо m / n - ціле, то доведення аналогічне, але замість ⌊m / n⌋ всюди буде m / n - 1.
+            </p>
+            <h3>Застосування:</h3>
+            <p class="main_theorem_text">
+                <b>Задача 1.</b><br/>
+                У місті більше ніж 8 мільйонів жителів. Науковці вважають, що в кожної
+                людини менш ніж 200 000 волосин на голові. Доведіть, що є принаймні 41
+                житель з однаковою кількістю волосин на голові.<br/><br/>
+                Ця задача доводиться за допомогою принципу Діріхле, у нас є 200 000 варіантів кількості волосин на голові
+                (від 0 до 199 999) і більше ніж 8 мільйонів жителів. Навіть якщо жителів 8 000 001, то за принципом Діріхле
+                у якомусь варіанті буде ⌈8 000 001 / 200 000⌉ жителів, тобто більше ніж 8 000 001 / 200 000 > 8 000 000 / 200 000
+                = 40 жителів - 41 житель.
+                <br/><br/>
+                <b>Задача 2.</b><br/>
+                Доведіть, що серед 82 кубиків, кожен із яких помальовано певним кольором, існує 10 кубиків різного кольору
+                або 10 кубиків одного кольору.
+                <br/><br/>
+                Якщо кількість кольорів ≥ 10, тоді зрозуміло, що знайдуться 10 кубиків різного кольору, по кубику для кожного
+                індивідуального кольору. Якщо кількість кольорів < 10, то у нагоді стане принцип Діріхле. ⌈82 / 9⌉ > 82 / 9 >
+                81 / 9 = 9, тоді як мінімум ⌈82 / 9⌉ ≥ 10 кубиків одного кольору будуть присутні, що закінчує доведення задачі.
+            </p>
+            <a href="look_for_theorems.html" class="return">&larr; Повернутися до пошуку теорем</a>
+            <br/><br/>
+        </main>
+        <footer>
+            <div class="footer_main">
+                <div class="navigate_footer">
+                    <a href="news.html">Новини/Статті</a>
+                    <a href="survey.html">Опитувальник</a>
+                    <a href="look_for_theorems.html">Пошук теорем</a>
+                    <a href="about_us.html">Про нас</a>
+                </div>
+                <div class="info_footer">
+                    <div><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;dubchak.oleksandr@chnu.edu.ua</div>
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> +38 (050) 123 45 67</div>
+                    <div><i class="fa fa-building-o"></i> &nbsp;MathAddicts Inc.</div>
+                    <div>вул. Університетська, 28</div>
+                    <div> м. Чернівці, Чернівецька область, 58000</div>
+                    <div>Україна</div>
+                </div>
+            </div>
+            <div class="copyright_and_more">
+                <button class="button2">
+                    <span class="copyright">Place your cursor here &rarr;&nbsp;&nbsp; Copyright &#169; 2024 MathAddicts. All rights reserved. &nbsp;&nbsp;&larr; Place your cursor here</span>
+                    <img src="images/run-forest-run.gif" alt="Forest didn't run away :(" class="copyright1 image">
+                    <img src="images/1.gif" alt="The Dark Side of Force has won :(" class="copyright1 image">
+                    <br/>
+                    <video id="myaudio" controls class="copyright1">
+                        <source src="images/MEOW.mp4" type="video/mp4"/>
+                    </video>
+                    <span class="copyright1" style="color: white; font-size: 20px;"><br/>&uarr; Play this :P &uarr;</span>
+                </button>
+            </div>
+        </footer>
+        <button onclick="scrollFunction()" class="hover_button" title="Go to top">&uarr;</button>
+        <script>
+            var audio = document.getElementById("myaudio");
+            audio.volume = 0.5;
+        </script>
+        <script>
+            let upButton = document.getElementsByClassName("hover_button")[0];
+            window.onscroll = function () { scrollDisplay() };
+            function scrollDisplay() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    upButton.style.display = "block";
+                }
+                else {
+                    upButton.style.display = "none";
+                }
+            }
+
+            function scrollFunction(){
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+    </body>
+</html>
